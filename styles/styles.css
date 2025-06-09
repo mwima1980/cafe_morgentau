@@ -67,32 +67,94 @@ small {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: var(--bg-color1);
   color: var(--text-color1);
 }
 .header-container h3 {
   font-family: DancingScript;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
 }
-.header-container .navbar-container ul {
+.header-container .desktop-navbar-container ul {
   display: flex;
   gap: 2rem;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }
-.header-container .navbar-container ul li {
+.header-container .desktop-navbar-container ul li {
   list-style: none;
 }
-.header-container .navbar-container ul li a {
+.header-container .desktop-navbar-container ul li a {
   text-decoration: none;
   color: var(--text-color1);
 }
-.header-container .navbar-container ul li a:hover,
-.header-container .navbar-container ul li a:focus {
+.header-container .desktop-navbar-container ul li a:hover,
+.header-container .desktop-navbar-container ul li a:focus {
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 2px;
+}
+.header-container .burger-container {
+  display: flex;
+  position: absolute;
+  right: 5rem;
+}
+.burger-container:hover {
+  cursor: pointer;
+}
+.burger-container:hover > .mobile-navbar-container {
+  display: block;
+}
+.header-container .burger-container img {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+.header-container .mobile-navbar-container {
+  position: absolute;
+}
+.header-container .mobile-navbar-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background-color: var(--bg-color1);
+}
+.header-container .mobile-navbar-container ul li {
+  list-style: none;
+}
+.header-container .mobile-navbar-container ul li a {
+  text-decoration: none;
+  color: var(--text-color1);
+}
+.header-container .mobile-navbar-container ul li a:hover,
+.header-container .mobile-navbar-container ul li a:focus {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 /* Media - Queries */
+@media (min-width: 320px) {
+  .header-container .desktop-navbar-container {
+    display: none;
+  }
+  .header-container .burger-container {
+    display: block;
+  }
+  .header-container .mobile-navbar-container {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .header-container .desktop-navbar-container {
+    display: block;
+  }
+  .header-container .mobile-navbar-container {
+    display: none;
+  }
+  .header-container .burger-container {
+    display: none;
+  }
+  .header-container .mobile-navbar-container {
+    display: none;
+  }
+}
 /* .container {
   width: 95%;
   padding-left: 1rem;
