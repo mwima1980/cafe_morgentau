@@ -7,70 +7,102 @@
 
 /* Fonts */
 @font-face {
-  font-family: Montserrat;
-  src: url("./src/Fonts/Montserrat-Regular.ttf") format("truetype");
+  font-family: Merriweather;
+  src: url("/src/fonts/Merriweather_24pt-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: Roboto;
-  src: url("./src/Fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: Lato;
+  src: url("/src/fonts/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: DancingScript;
+  src: url("/src/fonts/DancingScript-Regular.ttf") format("truetype");
 }
 
 /* Typescaling */
 h1 {
   font-size: 5.613rem;
-  font-family: Montserrat;
+  font-family: Merriweather;
 }
 h2 {
   font-size: 4.206rem;
-  font-family: Montserrat;
+  font-family: Merriweather;
 }
 h3 {
-  font-size: 3.156rem;
-  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-family: Merriweather;
 }
 h4 {
   font-size: 2.369rem;
-  font-family: Roboto;
+  font-family: Merriweather;
 }
 h5 {
   font-size: 1.775rem;
-  font-family: Roboto;
+  font-family: Merriweather;
 }
 h6 {
   font-size: 1.331rem;
-  font-family: Roboto;
+  font-family: Merriweather;
 }
 p {
   font-size: 1rem;
-  font-family: Roboto;
+  font-family: Lato;
 }
 small {
   font-size: 0.75rem;
-  font-family: Roboto;
+  font-family: Lato;
 }
 
 /* Variablen / Color */
 :root {
-  --color1: #373f51;
-  --color2: #d8dbe2;
-  --color3: #61e786;
-  --color4: #d81e5b;
-  --color5: #f19a3e;
-  --Color1Opa: ;
-  --realWhite: #fafafa;
+  --bg-color1: #e8dfd3;
+  --bg-color2: #f5f0e6;
+  --bg-color3: #3a2b24;
+  --bg-color4: #ffffff;
+  --text-color1: #3a2b24;
+  --text-color2: #e8dfd3;
 }
-
+/* Header - Section */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--bg-color1);
+  color: var(--text-color1);
+}
+.header-container h3 {
+  font-family: DancingScript;
+  margin-left: 2rem;
+}
+.header-container .navbar-container ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+.header-container .navbar-container ul li {
+  list-style: none;
+}
+.header-container .navbar-container ul li a {
+  text-decoration: none;
+  color: var(--text-color1);
+}
+.header-container .navbar-container ul li a:hover,
+.header-container .navbar-container ul li a:focus {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 /* Media - Queries */
-.container {
+/* .container {
   width: 95%;
   padding-left: 1rem;
   padding-right: 1;
   margin-left: auto;
   margin-right: auto;
   border: 3px solid red;
-}
+} */
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .container {
     width: 90%;
   }
@@ -89,7 +121,7 @@ small {
   }
 }
 @media (min-width: 1200px) {
-  container {
+  .container {
     width: 80%;
   }
   html {
@@ -97,7 +129,7 @@ small {
   }
 }
 @media (min-width: 1400px) {
-  container {
+  .container {
     width: 70%;
   }
   html {
@@ -105,10 +137,10 @@ small {
   }
 }
 @media (min-width: 1920px) {
-  container {
+  .container {
     width: 60%;
   }
   html {
     font-size: 1.3rem;
   }
-}
+} */
