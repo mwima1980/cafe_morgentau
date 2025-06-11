@@ -235,7 +235,50 @@ p {
   text-align: center;
   margin-top: 1.5rem;
 }
-
+/* Contact - Section */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 2.5rem 2.5rem 2.5rem;
+  background-color: var(--bg-color1);
+}
+.adress-container,
+.opening-container {
+  margin-top: 0.3rem;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+#name,
+#email {
+  padding: 0.5rem;
+  outline: none;
+}
+#nachricht {
+  height: 5rem;
+  padding: 0.5rem;
+  outline: none;
+}
+.form-container .btn-default {
+  width: 50%;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background-color: var(--bg-color3);
+  color: var(--bg-color1);
+  font-family: Lato;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+.form-container .btn-default:hover {
+  filter: brightness(1.6);
+}
 /* Media - Queries 320px*/
 @media (min-width: 320px) {
   /* Header - Container */
@@ -324,6 +367,22 @@ p {
   .tasting-container p {
     font-size: 1rem;
   }
+  /* Contact - Container */
+  .contact-container {
+    grid-template-columns: 1fr;
+    height: 70vh;
+  }
+  .adress-container {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .opening-container {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .form-container {
+    margin-top: 1.5rem;
+  }
 }
 /* Media - Queries 576px*/
 @media (min-width: 576px) {
@@ -367,6 +426,21 @@ p {
     margin-bottom: 0;
     text-align: left;
   }
+  /* Contact - Container */
+  #name,
+  #email,
+  #nachricht {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-container .btn-default {
+    width: 35%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+  }
 }
 /* Media - Queries 768px*/
 @media (min-width: 768px) {
@@ -385,6 +459,12 @@ p {
   .tasting-container {
     margin-left: auto;
     margin-right: auto;
+  }
+  /* Contact - Container */
+  .contact-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    padding: 0 2.5rem 2.5rem 0;
   }
 }
 /* .container {
