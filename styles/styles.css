@@ -185,7 +185,6 @@ p {
 .menue-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 2rem;
   color: var(--text-color1);
   padding: 0 2.5rem 2.5rem 2.5rem;
 }
@@ -202,6 +201,40 @@ p {
 .menue-container div p {
   text-align: center;
   margin-top: 0.5rem;
+}
+/* Events - Section */
+.events-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 2.5rem 2.5rem 2.5rem;
+}
+.music-container {
+  background-color: var(--bg-color1);
+  margin-right: 2rem;
+  padding: 2rem;
+  box-shadow: 10px -5px 5px #e0d6c4;
+}
+.tasting-container {
+  background-color: var(--bg-color1);
+  margin-left: 2rem;
+  padding: 2rem;
+  box-shadow: 10px -5px 5px #e0d6c4;
+}
+.music-container .guitar-container,
+.tasting-container .tasse-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.music-container .guitar-container img,
+.tasting-container .tasse-container img {
+  width: 3rem;
+}
+.music-container p,
+.tasting-container p {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 /* Media - Queries */
