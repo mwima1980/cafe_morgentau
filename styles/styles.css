@@ -4,7 +4,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 /* Fonts */
 @font-face {
   font-family: Merriweather;
@@ -206,7 +205,7 @@ p {
 .events-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 2.5rem 2.5rem 2.5rem;
+  padding: 0 2rem 2.5rem 2rem;
 }
 .music-container {
   background-color: var(--bg-color1);
@@ -237,8 +236,9 @@ p {
   margin-top: 1.5rem;
 }
 
-/* Media - Queries */
+/* Media - Queries 320px*/
 @media (min-width: 320px) {
+  /* Header - Container */
   .header-container .desktop-navbar-container {
     display: none;
   }
@@ -248,6 +248,7 @@ p {
   .header-container .mobile-navbar-container {
     display: none;
   }
+  /* Hero - Container */
   .hero-container .overlay-text h1 {
     font-size: 1.8rem;
     text-align: center;
@@ -261,6 +262,7 @@ p {
   .hero-container .overlay-text .btn-container {
     margin-top: 1.3rem;
   }
+  /* About - Us - Container*/
   .about-us-container {
     padding: 0;
   }
@@ -290,6 +292,7 @@ p {
   .grid-container .img-container img {
     width: 100%;
   }
+  /* Menue - Container */
   .menue-container {
     grid-template-columns: 1fr 1fr;
     row-gap: 1rem;
@@ -302,8 +305,29 @@ p {
   .menue-container div p {
     font-size: 0.75rem;
   }
+  /* Events - Container */
+  .events-container {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+  .music-container,
+  .tasting-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+  }
+  .guitar-container h4,
+  .tasse-container h4 {
+    font-size: 1rem;
+  }
+  .music-container p,
+  .tasting-container p {
+    font-size: 1rem;
+  }
 }
+/* Media - Queries 576px*/
 @media (min-width: 576px) {
+  /* Header - Container */
   .header-container .desktop-navbar-container {
     display: block;
   }
@@ -316,6 +340,7 @@ p {
   .header-container .mobile-navbar-container {
     display: none;
   }
+  /* Hero - Container */
   .hero-container .overlay-text h1 {
     font-size: 3rem;
     text-align: center;
@@ -343,9 +368,23 @@ p {
     text-align: left;
   }
 }
-@media (min-width: 576px) {
+/* Media - Queries 768px*/
+@media (min-width: 768px) {
+  /* Menue - Container */
   .menue-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  /* Events - Container */
+  .events-container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .music-container,
+  .tasting-container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /* .container {
